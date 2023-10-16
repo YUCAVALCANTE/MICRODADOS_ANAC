@@ -1,0 +1,293 @@
+Descrição das variáveis (microdados)
+
+Variáveis aqui apresentadas possuem relação com as descritas nas Portarias nº 3.506 e 3.507, da Superintendência de Serviços Aéreas da Agência Nacional de Aviação Civil, ambas de 11 de novembro de 2019.
+
+Os microdados dos Dados Estatísticos estão no mesmo padrão, e no mesmo nível de agregação, que se encontram na base de dados completa da Agência. Portanto estão distribuídos em suas duas dimensões, ou seja, em etapas básicas e etapas combinada, conforme descrições abaixo. 
+
+Etapa Básica (flight stage): As etapas básicas são aquelas realizadas pela aeronave desde a sua decolagem até o próximo pouso, independentemente de onde tenha ocorrido o embarque ou o desembarque do objeto de transporte. Os dados estatísticos das etapas básicas representam o status da aeronave em cada etapa do voo, apresentando a movimentação de cargas e passageiros entre os aeródromos de origem e destino da aeronave. É a operação de uma aeronave entre uma decolagem e o próximo pouso, a ligação entre dois aeródromos.
+
+id_basica: Código numérico identificador da etapa básica no sistema
+id_empresa: Código numérico identificador da empresa no sistema
+sg_empresa_icao: Sigla ICAO da empresa aérea. Refere-se ao designador da empresa de transporte aéreo obtido junto à OACI (Organização da Aviação Civil Internacional). 
+sg_empresa_iata: Sigla IATA da empresa aérea. Refere-se ao designador da empresa de transporte aéreo obtido junto à IATA (Associação Internacional de Transporte Aéreo).
+nm_empresa: Nome da empresa aérea.
+nm_pais: Nome do país da nacionalidade da empresa aérea.
+ds_tipo_empresa: Descrição do tipo de empresa. Refere-se à descrição do tipo de empresa em relação ao serviço realizado. Pode conter as seguintes descrições. Essa variável está em desuso.
+a) Transporte aéreo regular
+
+b) Transporte aéreo não regular
+
+c) Doméstico regular
+
+d) Estrangeira regular
+
+e) Estrangeira não regular
+
+f) Serviços aéreos públicos
+
+g) Ligação aérea sistemática regular
+
+h) Táxi-aéreo
+
+i) Aerolevantamente
+
+j) Aeropublicidade
+
+k) Aerofotografia
+
+l) Aeroinspeção
+
+nr_voo: Número do voo. Refere-se ao número atribuído à operação de uma etapa ou de uma série de etapas registradas sob a mesma numeração de voo.
+nr_singular: Singularidade do Voo. Refere-se ao conjunto de caracteres que auxilia na identificação do voo, composto de letras e números escolhidos a critério da própria empresa aérea.
+id_di: Código numérico que referencia no sistema a variável Dígito Identificador
+cd_di: Dígito Identificador. Refere-se ao caractere utilizado para identificar o tipo de autorização para cada etapa de voo, assumindo os seguintes valores:
+a) 0 (zero) - Etapa Regular
+
+b) 2 (dois) - Etapa Extra
+
+c) 3 (três) -Etapa de Retorno
+
+d) 4 (quatro) -Inclusão de Etapa
+
+e) 6 (seis) -Etapa Não Remunerada Sem Transporte de Objetos
+
+f) 7 (sete) -Etapa de Voo de Fretamento
+
+g) 9(nove) -Etapa de Voo Charter
+
+h) D -Etapa de Voo Duplicada
+
+i) E - Etapa Não Remunerada Com Transporte de Objetos
+
+ds_di: Descrição DI. Apresenta a descrição correspondente ao Dígito Identificador.  
+ds_grupo_di: Descrição do grupo DI ou Tipo de Voo. Refere-se ao agrupamento das classificações de DI em tipos de operações:
+Regular (DIs 0, 4 ou C)
+Não regular (DIs 1,2,5,7,8,9 ou D)
+Improdutivo (Demais DIs)
+dt_referencia: Data de Referência. Corresponde à Data Prevista de Início do Voo.
+nr_ano_referencia: Ano de Referência.
+nr_semestre_referencia: Número do semestre de referência.
+nm_semestre_referencia: Nome do semestre de referência.
+nr_trimestre_referencia: Número do trimestre de referência.
+nm_trimestre_referencia: Nome do trimestre de referência.
+nr_mes_referencia: Número do mês de referência.
+nm_mes_referencia: Nome do mês de referência.
+nr_semana_referencia: Número da semana de referência.
+nm_dia_semana_referencia: Nome do dia da semana de referência.
+nr_dia_referencia: Número do dia de referência.
+nr_ano_mes_referencia: Número representando o ano e o mês de referência, no formato AAAAMM.
+id_tipo_linha: Código numérico identificador do tipo de linha no sistema.
+cd_tipo_linha: Caractere que identifica o tipo de linha. O Tipo de Linha identifica o tipo de operação realizada no voo, podendo ser classificado em:
+a) N - Doméstica Mista: para operações de transporte aéreo de passageiros ou mistas, em que todos os aeródromos envolvidos estejam situados simultaneamente em território brasileiro;
+
+b) C - Doméstica Cargueira: para operações de transporte aéreo exclusivo de carga e/ou mala postal em que todos os aeródromos envolvidos estejam situados simultaneamente em território brasileiro;
+
+c) I - Internacional Mista: para operações de transporte aéreo de passageiros ou mistas, em que ao menos um dos aeródromos envolvidos esteja situado em território estrangeiro;
+
+d) G - Internacional Cargueira: para operações de transporte aéreo exclusivo de carga e/ou rede postal em que ao menos um dos aeródromos envolvidos esteja situado em território estrangeiro;
+
+ds_tipo_linha: Descrição do tipo de linha.
+ds_natureza_tipo_linha: Descrição da natureza referente ao tipo de linha (Internacional/Doméstica). Considera a natureza do voo, não apenas da etapa.
+ds_servico_tipo_linha: Descrição do serviço referente ao tipo de linha (Passageiro/Cargueiro).
+ds_natureza_etapa: Descrição da natureza da etapa de voo (Internacional/Doméstica).
+hr_partida_real: Horário de partida do voo, apurado pelo critério do calço e descalço.
+dt_partida_real: Data de realização. Refere-se à data completa de decolagem da etapa, apurada pelo critério do calço e descalço.
+nr_ano_partida_real: Número do ano de partida real.
+nr_semestre_partida_real: Número do semestre de partida real.
+nm_semestre_partida_real: Nome do semestre de partida real.
+nr_trimestre_partida_real: Número do trimestre de partida real.
+nm_trimestre_partida_real: Nome do trimestre de partida real.
+nr_mes_partida_real: Número do mês de partida real.
+nm_mes_partida_real: Nome do mês de partida real.
+nr_semana_partida_real: Número da semana de partida real.
+nm_dia_semana_partida_real: Nome do dia da semana de partida real.
+nr_dia_partida_real: Número do dia de partida real.
+nr_ano_mes_partida_real: Número que representa o ano e o mês de partida real, no formato AAAAMM.
+id_aerodromo_origem: Código identificador do aeródromo de origem no sistema.
+sg_icao_origem: Sigla ICAO do aeródromo de origem.
+sg_iata_origem: Sigla IATA do aeródromo de origem.
+nm_aerodromo_origem: Nome do aeródromo de origem.
+nm_municipio_origem: Nome do município de origem.
+sg_uf_origem: Sigla da Unidade Federativa de origem.
+nm_regiao_origem: Nome da região de origem.
+nm_pais_origem: Nome do país de origem.
+nm_continente_origem: Nome do continente de origem.
+nr_etapa: Número da etapa. Indica a sequência do aeródromo de origem entre os aeródromos sob o mesmo número de voo.
+hr_chegada_real: Horário de chegada do voo, apurado pelo critério do calço e descalço.
+dt_chegada_real: Data real de chegada.
+nr_ano_chegada_real: Número do ano de chegada real.
+nr_semestre_chegada_real: Número do semestre de chegada real.
+nm_semestre_chegada_real: Nome do semestre de chegada real.
+nr_trimestre_chegada_real: Número do trimestre de chegada real.
+nm_trimestre_chegada_real: Nome do trimestre de chegada real.
+nr_mes_chegada_real: Número do mês de chegada real.
+nm_mes_chegada_real: Nome do mês de chegada real.
+nr_semana_chegada_real: Número da semana de chegada real.
+nm_dia_semana_chegada_real: Nome do dia da semana de chegada real.
+nr_dia_chegada_real: Número do dia de chegada real.
+nr_ano_mes_chegada_real: Número que representa o ano e o mês de chegada real, no formato AAAAMM.
+id_equipamento: Código identificador do modelo da aeronave no sistema.
+sg_equipamento_icao: Designador ICAO do modelo da aeronave (“Type Designator”)
+ds_modelo: Descrição do modelo da aeronave.
+ds_matricula: Marca de matrícula da aeronave.
+id_aerodromo_destino: Código identificador do aeródromo de destino no sistema.
+sg_icao_destino: Sigla ICAO do aeródromo de destino.
+sg_iata_destino: Sigla IATA do aeródromo de destino.
+nm_aerodromo_destino: Nome do aeródromo de destino.
+nm_municipio_destino: Nome do município de destino.
+sg_uf_destino: Sigla da Unidade Federativa de destino.
+nm_regiao_destino: Nome da região de destino.
+nm_pais_destino: Nome do país de destino.
+nm_continente_destino: Nome do continente de destino.
+nr_escala_destino: Sequência de escala de destino. É o número correspondente ao aeródromo de destino da etapa, considerando a numeração sequencial dos aeródromos percorridos sob um mesmo voo.
+lt_combustivel: Quantidade de combustível consumida, expressa em litros.
+nr_assentos_ofertados: Número de assentos disponíveis na etapa do voo.
+kg_payload: Capacidade Payload, expressa em quilogramas.
+km_distancia: Distância, expressa em quilômetros, entre os aeródromos de origem e destino da etapa, considerando a curvatura do planeta terra.
+nr_passag_pagos: Número de passageiros que ocupam assentos comercializados ao público e que geram receita, com a compra de assentos, para a empresa de transporte aéreo.
+nr_passag_gratis: Número de passageiros que ocupam assentos comercializados ao público, mas não geram receita, com a compra de assentos, para a empresa de transporte aéreo.
+kg_bagagem_livre: Bagagem franqueada. É toda bagagem que não é considerada como excesso, expressa em quilogramas.
+kg_bagagem_excesso: Excesso de bagagem. É a quantidade total de bagagem que excede o limite de peso acordado entre a empresa aérea e o passageiro (adquirido antes ou depois da compra do bilhete), verificada no momento do despacho, expressa em quilogramas.
+kg_carga_paga: Carga paga. É a quantidade total, expressa em quilogramas, de todos os bens que tenham sido transportados na aeronave, exceto correio e bagagem, e tenham gerado receita direta ou indireta para a empresa aérea.  
+kg_carga_gratis: Quantidade total, expressa em quilogramas, de todos os bens que tenham sido transportados na aeronave, exceto correio e bagagem, e não tenha gerado receitas diretas ou indiretas para a empresa aérea.
+kg_correio: Quantidade, expressa em quilogramas, de objetos transportados para atender aos operadores designados oficialmente pelo país para operar serviços postais e cumprir com as obrigações associadas decorrentes dos Atos da Universal Postal Union (UPU)
+nr_decolagem: Número de decolagens.
+nr_horas_voadas: Número de horas voadas.
+kg_peso: Refere-se ao peso total carregado pela aeronave, calculado pela soma de carga, correio, passageiros e bagagem, expressos em kg. O peso dos passageiros transportados é calculado multiplicando-se a quantidade total de passageiros por 75, para empresas brasileiras. No caso das empresas estrangeiras, que não enviam dados de bagagem à ANAC, o peso total de passageiros e bagagens é estimado multiplicando-se a quantidade total de passageiros por 90.
+nr_velocidade_media: Velocidade média do voo, calculada a partir da distância e da duração do voo, expressa em km/h.
+nr_pax_gratis_km: Representa, para cada etapa básica, o produto entre a quantidade de passageiros grátis e a distância da etapa.
+nr_carga_paga_km: Refere-se ao produto entre a quantidade de carga paga (kg) e a distância da etapa básica (km).
+nr_carga_gratis_km: Refere-se ao produto entre a quantidade de carga grátis (kg) e a distância da etapa básica (km).
+nr_correio_km: Refere-se ao produto entre a quantidade de correio (kg) e a distância da etapa básica (km).
+nr_bagagem_paga_km: Refere-se ao produto entre a quantidade de bagagem paga (kg) e a distância da etapa básica (km).
+nr_bagagem_gratis_km: Refere-se ao produto entre a quantidade de bagagem grátis (kg) e a distância da etapa básica (km).
+nr_ask: Refere-se ao volume de Assentos Quilômetros Oferecidos (Available Seat Kilometer). É calculado, em cada etapa básica, pelo produto entre o número de assentos oferecidos e a distância da etapa.
+nr_rpk: Refere-se ao volume de Passageiros Quilômetros Transportados (Revenue Passenger Kilometer). É calculado, em cada etapa básica, pelo produto entre o número de passageiros pagos e a distância da etapa.
+nr_atk: Refere-se ao volume de Toneladas Quilômetros Oferecidas (Available Tonne Kilometer), expresso em (ton x km). É calculado, em cada etapa básica, pelo produto entre a Capacidade Payload (kg) e a distância da etapa, dividido por 1000.
+nr_rtk: Refere-se ao volume de Toneladas Quilômetros Transportadas (Revenue Tonne Kilometer), expresso em (ton x km). É calculado, em cada etapa básica, pelo produto entre a quantidade, expressa em quilogramas, de passageiros, bagagem, carga e correio pagos transportada e a distância da etapa, dividido por 1000. Cada passageiro possui o peso estimado de 75kg, para empresas brasileiras. No caso das empresas estrangeiras, que não enviam dados de bagagem à ANAC, o peso total de passageiros e bagagens é estimado multiplicando-se a quantidade total de passageiros por 90.
+id_arquivo: Código identificador do arquivo de dados enviado ao sistema.
+nm_arquivo: Nome do arquivo enviado ao sistema.
+nr_linha: Número da linha do arquivo na qual estão contidos os dados de cada etapa básica.
+dt_sistema: Data em que as informações foram registradas no sistema. 
+Etapa Combinada (On flight origin and destination - OFOD): As etapas combinadas identificam os pares de origem, onde ocorreu o embarque do objeto de transporte, e destino, onde ocorreu o desembarque do objeto de transporte, independentemente da existência de aeródromos intermediários, atendidos por determinado voo. É a etapa de voo vista com foco no objeto de transporte (pessoas e/ou cargas), com base no embarque e no desembarque nos aeródromos relacionados. Os dados estatísticos da etapa combinada informam a origem e destino dos passageiros e cargas transportadas no voo, independentemente das escalas realizadas.
+
+id_combinada: Código numérico identificador da etapa combinada no sistema
+id_empresa: Código numérico identificador da empresa no sistema
+sg_empresa_icao: Sigla ICAO da empresa aérea. Refere-se ao designador da empresa de transporte aéreo obtido junto à OACI (Organização da Aviação Civil Internacional). 
+sg_empresa_iata: Sigla IATA da empresa aérea. Refere-se ao designador da empresa de transporte aéreo obtido junto à IATA (Associação Internacional de Transporte Aéreo).
+nm_empresa: Nome da empresa aérea.
+nm_pais: Nome do país da nacionalidade da empresa aérea.
+ds_tipo_empresa: Descrição do tipo de empresa. Refere-se à descrição do tipo de empresa em relação ao serviço realizado. Pode conter as seguintes descrições. Essa variável está em desuso.
+Transporte aéreo regular
+Transporte aéreo não regular
+Doméstico regular
+Estrangeira regular
+Estrangeira não regular
+Serviços aéreos públicos
+Ligação aérea sistemática regular
+Táxi-aéreo
+Aerolevantamente
+Aeropublicidade
+Aerofotografia
+Aeroinspeção
+nr_voo: Número do voo. Refere-se ao número atribuído à operação de uma etapa ou de uma série de etapas registradas sob a mesma numeração de voo.
+nr_singular: Singularidade do Voo. Refere-se ao conjunto de caracteres que auxilia na identificação do voo, composto de letras e números escolhidos a critério da própria empresa aérea.
+id_di: Código numérico que referencia ao sistema a variável Dígito Identificador
+cd_di: Dígito Identificador. Refere-se ao caractere utilizado para identificar o tipo de autorização para cada etapa de voo, assumindo os seguintes valores:
+0 (zero) - Etapa Regular
+2 (dois) - Etapa Extra
+3 (três) -Etapa de Retorno
+4 (quatro) -Inclusão de Etapa
+6 (seis) -Etapa Não Remunerada Sem Transporte de Objetos
+7 (sete) -Etapa de Voo de Fretamento
+9(nove) -Etapa de Voo Charter
+D -Etapa de Voo Duplicada
+ds_di: Descrição DI. Apresenta a descrição correspondente ao Dígito Identificador apresentado. 
+ds_grupo_di: Descrição do grupo DI ou Tipo de Voo. Refere-se ao agrupamento das classificações de DI em tipos de operações:
+Regular (DIs 0, 4 ou C)
+Não regular (DIs 1,2,5,7,8,9 ou D)
+Improdutivo (Demais DIs)
+dt_referencia: Data de Referência. Corresponde à Data Prevista de Início do Voo.
+nr_ano_referencia: Ano de Referência.
+nr_semestre_referencia: Número do semestre de referência.
+nm_semestre_referencia: Nome do semestre de referência.
+nr_trimestre_referencia: Número do trimestre de referência.
+nm_trimestre_referencia: Nome do trimestre de referência.
+nr_mes_referencia: Número do mês de referência.
+nm_mes_referencia: Nome do mês de referência.
+nr_semana_referencia: Número da semana de referência.
+nm_dia_semana_referencia: Nome do dia da semana de referência.
+nr_dia_referencia: Número do dia de referência.
+nr_ano_mes_referencia:  Número representando o ano e o mês de referência, no formato AAAAMM.
+id_tipo_linha: Código numérico identificador do tipo de linha no sistema.
+cd_tipo_linha: Caractere que identifica o tipo de linha. O Tipo de Linha identifica o tipo de operação realizada no voo, podendo ser classificado em:
+N - Doméstica Mista: para operações de transporte aéreo de passageiros ou mistas, em que todos os aeródromos envolvidos estejam situados simultaneamente em território brasileiro;
+C - Doméstica Cargueira: para operações de transporte aéreo exclusivo de carga e/ou mala postal em que todos os aeródromos envolvidos estejam situados simultaneamente em território brasileiro;
+I - Internacional Mista: para operações de transporte aéreo de passageiros ou mistas, em que ao menos um dos aeródromos envolvidos esteja situado em território estrangeiro;
+G - Internacional Cargueira: para operações de transporte aéreo exclusivo de carga e/ou rede postal em que ao menos um dos aeródromos envolvidos esteja situado em território estrangeiro;
+ds_tipo_linha: Descrição do tipo de linha.
+ds_natureza_tipo_linha: Descrição da natureza referente ao tipo de linha (Internacional/Doméstica). Considera a natureza do voo, não apenas da etapa.
+ds_servico_tipo_linha: Descrição do serviço referente ao tipo de linha (Passageiro/Cargueiro).
+ds_natureza_etapa: Descrição da natureza da etapa de voo (Intenacional/Doméstica).
+hr_partida_real: Horário de partida do voo, apurado pelo critério do calço e descalço.
+dt_partida_real: Data de realização. Refere-se à data completa de decolagem da etapa, apurada pelo critério do calço e descalço.
+nr_ano_partida_real: Número do ano de partida real.
+nr_semestre_partida_real: Número do semestre de partida real.
+nm_semestre_partida_real: Nome do semestre de partida real.
+nr_trimestre_partida_real: Número do trimestre de partida real.
+nm_trimestre_partida_real: Nome do trimestre de partida real.
+nr_mes_partida_real: Número do mês de partida real.
+nm_mes_partida_real: Nome do mês de partida real.
+nr_semana_partida_real: Número da semana de partida real.
+nm_dia_semana_partida_real: Nome do dia da semana de partida real.
+nr_dia_partida_real: Número do dia de partida real.
+nr_ano_mes_partida_real: Número que representa o ano e o mês de partida real, no formato AAAAMM.
+id_aerodromo_origem: Código identificador do aeródromo de origem no sistema.
+sg_icao_origem: Sigla ICAO do aeródromo de origem.
+sg_iata_origem: Sigla IATA do aeródromo de origem.
+nm_aerodromo_origem: Nome do aeródromo de origem.
+nm_municipio_origem: Nome do município de origem.
+sg_uf_origem: Sigla da Unidade Federativa de origem.
+nm_regiao_origem: Nome da região de origem.
+nm_pais_origem: Nome do país de origem.
+nm_continente_origem: Nome do continente de origem.
+nr_etapa: Número da etapa. Indica a sequência do aeródromo de origem entre os aeródromos sob o mesmo número de voo.
+hr_chegada_real: Horário de chegada do voo, apurado pelo critério do calço e descalço.
+dt_chegada_real: Data real de chegada.
+nr_ano_chegada_real: Número do ano de chegada real.
+nr_semestre_chegada_real: Número do semestre de chegada real.
+nm_semestre_chegada_real: Nome do semestre de chegada real.
+nr_trimestre_chegada_real: Número do trimestre de chegada real.
+nm_trimestre_chegada_real: Nome do trimestre de chegada real.
+nr_mes_chegada_real: Número do mês de chegada real.
+nm_mes_chegada_real: Nome do mês de chegada real.
+nr_semana_chegada_real: Número da semana de chegada real.
+nm_dia_semana_chegada_real: Nome do dia da semana de chegada real.
+nr_dia_chegada_real: Número do dia de chegada real.
+nr_ano_mes_chegada_real: Número que representa o ano e o mês de chegada real, no formato AAAAMM.
+id_aerodromo_destino: Código identificador do aeródromo de destino no sistema.
+sg_icao_destino: Sigla ICAO do aeródromo de destino.
+sg_iata_destino: Sigla IATA do aeródromo de destino.
+nm_aerodromo_destino: Nome do aeródromo de destino.
+nm_municipio_destino: Nome do município de destino.
+sg_uf_destino: Sigla da Unidade Federativa de destino.
+nm_regiao_destino: Nome da região de destino.
+nm_pais_destino: Nome do país de destino.
+nm_continente_destino: Nome do continente de destino.
+nr_escala_destino: Sequência de escala de destino. É o número correspondente ao aeródromo de destino da etapa, considerando a numeração sequencial dos aeródromos percorridos sob um mesmo voo.
+cd_cotran: Caractere que representa o Cotran (Código de Transporte). O Cotran é utilizado para informar o tipo de desembarque realizado pelo objeto de transporte (passageiro, carga ou correio), informando sobre a realização ou não de conexões. Ele pode assumir os seguintes valores:
+N -Desembarque: o objeto foi desembarcado no aeródromo de destino em questão e não fez conexão, ou seja, não foi embarcado em outro voo pertencente ao mesmo contrato de transporte;
+D -Trânsito Doméstico: o objeto foi desembarcado no aeródromo de destino em questão para um reembarque, que faça parte do mesmo contrato de transporte, em um voo que possua tipo de linha C ou N;
+I -Trânsito Internacional: o objeto foi desembarcado no aeródromo de destino em questão para um reembarque, que faça parte do mesmo contrato de transporte, em um voo que possua tipo de linha G ou I.
+ds_cotran: Descrição do Cotran (Código de Transporte).
+nr_passag_pagos: Número de passageiros que ocupam assentos comercializados ao público e que geram receita, com a compra de assentos, para a empresa de transporte aéreo.
+nr_passag_gratis: Número de passageiros que ocupam assentos comercializados ao público mas não geram receita, com a compra de assentos, para a empresa de transporte aéreo.
+kg_bagagem_livre: Bagagem franqueada. É toda bagagem que não é considerada como excesso, expressa em quilogramas.
+kg_bagagem_excesso: Excesso de bagagem. É a quantidade total de bagagem que excede o limite de peso acordado entre a empresa aérea e o passageiro (adquirido antes ou depois da compra do bilhete), verificada no momento do despacho, expressa em quilogramas.
+kg_carga_paga: Carga paga. É a quantidade total, expressa em quilogramas, de todos os bens que tenham sido transportados na aeronave, exceto correio e bagagem, e tenham gerado receita direta ou indireta para a empresa aérea.
+kg_carga_gratis: Quantidade total, expressa em quilogramas, de todos os bens que tenham sido transportados na aeronave, exceto correio e bagagem, e não tenha gerado receitas diretas ou indiretas para a empresa aérea.
+kg_correio: Quantidade, expressa em quilogramas, de objetos transportados para atender aos operadores designados oficialmente pelo país para operar serviços postais e cumprir com as obrigações associadas decorrentes dos Atos da Universal Postal Union (UPU).
+id_arquivo: Código identificador do arquivo de dados enviado ao sistema.
+nm_arquivo: Nome do arquivo enviado ao sistema.
+nr_linha: Número da linha do arquivo na qual estão contidos os dados de cada etapa básica.
+dt_sistema: Data em que as informações foram registradas no sistema.
