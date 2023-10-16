@@ -4,7 +4,6 @@ Este repositório contém um script em Python desenvolvido para extração autom
 
 O script é responsável por:
 
-Navegar até a página principal da ANAC e identificar os links relevantes que contêm a palavra "combinada".
-Realizar o download e o processamento dos arquivos associados a esses links.
-Organizar e consolidar os dados extraídos em um único arquivo CSV, facilitando análises subsequentes.
-Além do relatório principal, a ANAC oferece uma Consulta Interativa, uma ferramenta valiosa para quem busca insights mais detalhados e personalizados sobre a demanda e oferta no setor de aviação civil brasileiro.
+- Navegar até a página principal da ANAC e identificar os links relevantes que contêm a palavra "combinada".
+- Organizar e consolidar os dados extraídos em um único arquivo CSV, facilitando análises subsequentes.
+- Realizar o download e o processamento dos arquivos associados a esses links.
