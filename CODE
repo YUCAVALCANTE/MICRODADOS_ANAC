@@ -1,0 +1,45 @@
+import requests
+from bs4 import BeautifulSoup
+import zipfile
+import io
+import pandas as pd
+from flask import Flask, send_from_directory
+
+app = Flask(__name__)
+
+@app.route('/download')
+def download_file():
+    return send_from_directory(directory='.', filename="combinada_total.csv")
+
+def fetch_and_prepare_data():
+    # Obter todos os links contendo a palavra "combinada" da página fornecida
+    url = 'https://www.gov.br/anac/pt-br/assuntos/regulados/empresas-aereas/Instrucoes-para-a-elaboracao-e-apresentacao-das-demonstracoes-contabeis/envio-de-informacoes'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    links = [a['href'] for a in soup.find_all('a', href=True) if "combinada" in a['href'].lower()]
+
+    # Lista vazia para armazenar os DataFrames
+    dataframes = []
+
+    # Download e leitura dos arquivos .zip de cada link
+    for link in links:
+        response = requests.get(link)
+        with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+            # Supondo que cada zip contém apenas um arquivo .txt
+            with z.open(z.namelist()[0]) as f:
+                # Ler o arquivo .txt para um DataFrame e adicioná-lo à lista
+                df = pd.read_csv(f, sep=";", encoding="latin1", low_memory=False)
+                dataframes.append(df)
+
+    # Concatenar todos os DataFrames
+    combined_df = pd.concat(dataframes, ignore_index=True)
+
+    # Salvar em um arquivo .csv
+    combined_df.to_csv("combinada_total.csv", sep=";", encoding="latin1", index=False)
+
+    # Exibir as 50 primeiras linhas
+    print(combined_df.head(50))
+
+if __name__ == "__main__":
+    fetch_and_prepare_data()
+    app.run(port=5000)
